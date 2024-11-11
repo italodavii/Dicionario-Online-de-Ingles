@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dicionário Inglês</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicionário Online de Inglês</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="dictionary.png" alt="logo">
-    <h1>Dicionário de Inglês</h1>
-  </header>
-
-  <section>
+    <header>
+        <h1><img src="dictionary.png" alt="logo">Dicionário Online de Inglês</h1>
+    </header>
     <div class="container">
+        <div class="search-container">
+            <div class="input-group">
+                <input type="text" id="wordInput" placeholder="Digite uma palavra em inglês..." onkeydown="if(event.key === 'Enter') buscarPalavra()">
+                <button onclick="buscarPalavra()">Buscar</button>
+            </div>
+            <div class="result-container" id="resultContainer"></div>
+        </div>
 
-      <div class="input-group">
-        <input type="text" id="wordInput" placeholder="Digite uma palavra em inglês...">
-        <button onclick="buscarPalavra()">Buscar</button>
-      </div>
-
-      <div class="result" id="resultContainer">
-        <!-- Tradução, significado e exemplo estão aqui -->
-      </div>
+        <div class="list-up">
+            <h2>Palavras em Alta</h2>
+            <!-- Botões serão gerados aqui pelo JavaScript -->
+        </div>
+        
     </div>
-  </section>
 
-<footer>
-  <p>Academic project of software engineering students ©</p>
-</footer>
+    <footer>
+        <p>Projeto acadêmico de estudantes de Engenharia de Software © 2024 Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
