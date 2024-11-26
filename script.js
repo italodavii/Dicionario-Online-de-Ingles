@@ -39,7 +39,7 @@ function buscarPalavra(palavra = '') {
 }
 
 function exibirResultado(palavra, significado, exemploUso, traducao, sinônimos, antônimos, fonetica, categoriaGramatical) {
-    // Convertendo sinônimos e antônimos para listas
+   
     const sinônimosLista = sinônimos.length > 0 ? sinônimos.join(', ') : "Nenhum sinônimo encontrado.";
     const antônimosLista = antônimos.length > 0 ? antônimos.join(', ') : "Nenhum antônimo encontrado.";
 
@@ -77,11 +77,10 @@ function criarPalavrasEmAlta() {
     palavrasEmAlta.forEach(palavra => {
         const button = document.createElement('button');
         button.textContent = palavra;
-        button.onclick = () => buscarPalavra(palavra); // Adiciona a função de busca
+        button.onclick = () => buscarPalavra(palavra); 
         listUpContainer.appendChild(button);
     });
 }
 
-// Chama a função quando o script for carregado
 criarPalavrasEmAlta();
 
